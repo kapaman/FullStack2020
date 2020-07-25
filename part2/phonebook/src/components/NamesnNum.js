@@ -1,7 +1,11 @@
 import React from "react";
-import ReactDOM from "react-dom";
+
 const NamesnNum = (props) => {
-  return (
+   return props.del?(
+    <li>
+      {props.name} {props.number}<button id={props.id} key={props.id} onClick={props.deletePerson}> delete</button>
+    </li>
+  ):(
     <li>
       {props.name} {props.number}
     </li>
