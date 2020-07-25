@@ -18,7 +18,7 @@ const blogSchema = mongoose.Schema({
 
 const Blog = mongoose.model('Blog', blogSchema)
 
-const mongoUrl = process.env.MONGODB_URI;
+const mongoUrl = 'mongodb+srv://fullstack:123123123@cluster0-ryzsp.mongodb.net/bloglist?retryWrites=true&w=majority'
 blogSchema.set('toJSON', {
   transform: (document, returnedObject) => {
     returnedObject.id = returnedObject._id.toString()

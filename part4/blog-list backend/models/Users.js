@@ -18,7 +18,7 @@ const userSchema = mongoose.Schema({
 
 userSchema.plugin(uniqueValidator)
 
-const mongoUrl = process.env.MONGODB_URI;
+const mongoUrl = 'mongodb+srv://fullstack:123123123@cluster0-ryzsp.mongodb.net/bloglist?retryWrites=true&w=majority'
 userSchema.set('toJSON', {
     transform: (document, returnedObject) => {
         returnedObject.id = returnedObject._id.toString()
